@@ -28,7 +28,7 @@ def update(chat_id):
         #если подходит то берёт его
         link = 'https://phtt.ru/' + link
         pdf = urllib.request.urlretrieve(link, "timetable.pdf")
-        png = convert_from_path(r'timetable.pdf', 500)
+        png = convert_from_path(r'timetable.pdf', 500, poppler_path=r'ТУТ ПУТЬ ДО poopler'a') # в '' путь до poopler'a
         png[0].save('out.png', 'PNG')
         png = cv2.imread('out.png')
         #вырезает расписание нужной группы
